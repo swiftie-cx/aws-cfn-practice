@@ -17,3 +17,4 @@ Resources:
         LambdaS3Bucket: <S3>
         LambdaS3Key: lambda/hello.zip
         LambdaRoleArn: !GetAtt IAMStack.Outputs.LambdaExecutionRoleArn
+# trigger workflow
