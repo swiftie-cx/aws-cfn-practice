@@ -35,13 +35,13 @@ Resources:
         S3Key: !Ref GoodbyeLambdaS3Key
       Timeout: 3
   EchoLambda:
-  Type: AWS::Lambda::Function
-  Properties:
-    FunctionName: echo-lambda
-    Handler: echo.lambda_handler
-    Role: !Ref LambdaRoleArn
-    Runtime: python3.11
-    Code:
-      S3Bucket: !Ref LambdaS3Bucket
-      S3Key: !Ref EchoLambdaS3Key
-    Timeout: 3
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: echo-lambda
+      Handler: echo.lambda_handler
+      Role: !Ref LambdaRoleArn
+      Runtime: python3.11
+      Code:
+        S3Bucket: !Ref LambdaS3Bucket
+        S3Key: !Ref EchoLambdaS3Key
+      Timeout: 3
