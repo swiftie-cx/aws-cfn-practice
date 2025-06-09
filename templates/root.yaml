@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Root stack"
+Resources:
+  S3Stack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: <ÄãµÄS3Í°>/templates/s3.yaml
+  IAMStack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: <ÄãµÄS3Í°>/templates/iam.yaml
+  LambdaStack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: <ÄãµÄS3Í°>/templates/lambda.yaml
+      Parameters:
+        LambdaS3Bucket: <ÄãµÄS3Í°Ãû>
+        LambdaS3Key: lambda/hello.zip
+        LambdaRoleArn: !GetAtt IAMStack.Outputs.LambdaExecutionRoleArn

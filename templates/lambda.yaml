@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Lambda stack"
+Parameters:
+  LambdaS3Bucket:
+    Type: String
+  LambdaS3Key:
+    Type: String
+  LambdaRoleArn:
+    Type: String
+Resources:
+  # 以后有 Lambda 再加
