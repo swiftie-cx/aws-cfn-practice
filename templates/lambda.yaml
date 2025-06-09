@@ -8,4 +8,4 @@ Parameters:
   LambdaRoleArn:
     Type: String
 Resources:
-  # 以后有 Lambda 再加
+  # 

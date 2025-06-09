@@ -4,16 +4,16 @@ Resources:
   S3Stack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: <ÄãµÄS3Í°>/templates/s3.yaml
+      TemplateURL: <S3>/templates/s3.yaml
   IAMStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: <ÄãµÄS3Í°>/templates/iam.yaml
+      TemplateURL: <S3>/templates/iam.yaml
   LambdaStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: <ÄãµÄS3Í°>/templates/lambda.yaml
+      TemplateURL: <S3>/templates/lambda.yaml
       Parameters:
-        LambdaS3Bucket: <ÄãµÄS3Í°Ãû>
+        LambdaS3Bucket: <S3>
         LambdaS3Key: lambda/hello.zip
         LambdaRoleArn: !GetAtt IAMStack.Outputs.LambdaExecutionRoleArn

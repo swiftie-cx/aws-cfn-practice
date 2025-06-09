@@ -21,7 +21,7 @@ jobs:
     - name: Upload templates
       run: aws s3 cp templates/ s3://swiftiecx-project01/templates/ --recursive
 
-    - name: Upload Lambda code (Èç¹ûÓÐzip°ü)
+    - name: Upload Lambda code (å¦‚æžœæœ‰zipåŒ…)
       run: aws s3 cp lambda/hello.zip s3://swiftiecx-project01/lambda/hello.zip || true
 
     - name: Deploy CloudFormation stack
