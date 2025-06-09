@@ -9,7 +9,7 @@ Parameters:
     Type: String
   EchoLambdaS3Key:
     Type: String  
-  TimeLambdaS3Key:
+  MyTimeLambdaS3Key:
     Type: String
   LambdaRoleArn:
     Type: String
@@ -47,15 +47,15 @@ Resources:
         S3Bucket: !Ref LambdaS3Bucket
         S3Key: !Ref EchoLambdaS3Key
       Timeout: 3
-  TimeLambda:
+  MyTimeLambda:
     Type: AWS::Lambda::Function
     Properties:
-      FunctionName: time-lambda
-      Handler: time.lambda_handler
+      FunctionName: mytime-lambda
+      Handler: mytime.lambda_handler
       Role: !Ref LambdaRoleArn
       Runtime: python3.11
       Code:
         S3Bucket: !Ref LambdaS3Bucket
-        S3Key: !Ref TimeLambdaS3Key
+        S3Key: !Ref MyTimeLambdaS3Key
       Timeout: 3
       

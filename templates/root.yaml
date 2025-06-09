@@ -20,6 +20,6 @@ Resources:
         HelloLambdaS3Key: lambda/hello.zip
         GoodbyeLambdaS3Key: lambda/goodbye.zip
         EchoLambdaS3Key: lambda/echo.zip
-        TimeLambdaS3Key: lambda/time.zip
+        MyTimeLambdaS3Key: lambda/mytime.zip
         LambdaRoleArn: !GetAtt IAMStack.Outputs.LambdaExecutionRoleArn
 
