@@ -22,7 +22,7 @@ jobs:
       run: aws s3 cp templates/ s3://swiftiecx-project01/templates/ --recursive
 
     - name: Upload Lambda code (如果有zip包)
-      run: aws s3 cp lambda/hello.zip s3://swiftiecx-project01/lambda/hello.zip || true
+      run: aws s3 cp lambda/ s3://swiftiecx-project01/lambda/ --recursive
 
     - name: Deploy CloudFormation stack
       run: |
