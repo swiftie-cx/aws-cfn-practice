@@ -11,11 +11,13 @@ Resources:
     Properties:
       TemplateURL: https://swiftiecx-project01.s3.ap-northeast-1.amazonaws.com/templates/iam.yaml
 
-  LambdaStack:
+    LambdaStack:
     Type: AWS::CloudFormation::Stack
     Properties:
       TemplateURL: https://swiftiecx-project01.s3.ap-northeast-1.amazonaws.com/templates/lambda.yaml
       Parameters:
         LambdaS3Bucket: swiftiecx-project01
-        LambdaS3Key: lambda/hello.zip
+        HelloLambdaS3Key: lambda/hello.zip
+        GoodbyeLambdaS3Key: lambda/goodbye.zip
         LambdaRoleArn: !GetAtt IAMStack.Outputs.LambdaExecutionRoleArn
+

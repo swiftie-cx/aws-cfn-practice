@@ -17,7 +17,7 @@ Resources:
       Runtime: python3.11
       Code:
         S3Bucket: !Ref LambdaS3Bucket
-        S3Key: !Ref LambdaS3Key
+        S3Key: !Ref HelloLambdaS3Key
       Timeout: 3
   GoodbyeLambda:
     Type: AWS::Lambda::Function
@@ -28,5 +28,5 @@ Resources:
       Runtime: python3.11
       Code:
         S3Bucket: !Ref LambdaS3Bucket
-        S3Key: goodbye.zip
+        S3Key:  !Ref GoodbyeLambdaS3Key
       Timeout: 3
