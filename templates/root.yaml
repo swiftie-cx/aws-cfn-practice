@@ -19,5 +19,6 @@ Resources:
         LambdaS3Bucket: swiftiecx-project01
         HelloLambdaS3Key: lambda/hello.zip
         GoodbyeLambdaS3Key: lambda/goodbye.zip
+        EchoLambdaS3Key: lambda/echo.zip
         LambdaRoleArn: !GetAtt IAMStack.Outputs.LambdaExecutionRoleArn
 
