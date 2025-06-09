@@ -8,4 +8,14 @@ Parameters:
   LambdaRoleArn:
     Type: String
 Resources:
-  # 
+  HelloLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: hello-lambda
+      Handler: hello.lambda_handler
+      Role: !Ref LambdaRoleArn
+      Runtime: python3.11
+      Code:
+        S3Bucket: !Ref LambdaS3Bucket
+        S3Key: !Ref LambdaS3Key
+      Timeout: 3
